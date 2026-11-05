@@ -67,18 +67,18 @@
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-uhs-500 selection:text-white overflow-x-hidden">
 
     <!-- TOP INSTITUTIONAL BAR -->
-    <div class="bg-navy-950 text-slate-300 text-xs py-2 px-4 border-b border-white/10">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-2 text-[11px] sm:text-xs">
+    <div class="bg-navy-950 text-slate-300 text-xs py-2 px-3 sm:px-4 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1.5 sm:gap-2 text-center sm:text-left">
+            <div class="flex items-center justify-center sm:justify-start gap-2 text-[11px] sm:text-xs min-w-0">
                 <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
-                <span class="font-medium text-slate-200">University of Health Sciences, Lahore</span>
+                <span class="font-medium text-slate-200 truncate">University of Health Sciences, Lahore</span>
                 <span class="text-slate-500 hidden sm:inline">&bull;</span>
-                <span class="text-slate-400 hidden sm:inline">Directorate of Information Technology</span>
+                <span class="text-slate-400 hidden sm:inline truncate">Directorate of Information Technology</span>
             </div>
-            <div class="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-xs text-slate-400">
+            <div class="flex items-center justify-center gap-3 sm:gap-4 text-[11px] sm:text-xs text-slate-400 flex-shrink-0">
                 <span class="flex items-center gap-1.5">
                     <svg class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                    <span>Support Hotline: Ext <strong class="text-white font-semibold">304, 305</strong></span>
+                    <span>Hotline: Ext <strong class="text-white font-semibold">304, 305</strong></span>
                 </span>
                 <span>&bull;</span>
                 <span class="flex items-center gap-1.5">
@@ -91,27 +91,27 @@
 
     <!-- MAIN NAVIGATION -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition w-full">
-        <div class="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20 gap-3">
+        <div class="w-full max-w-[1536px] mx-auto px-3 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-3">
                 <!-- LOGO & BRAND -->
-                <a href="{{ url('/') }}" class="flex items-center gap-3 group flex-shrink-0">
+                <a href="{{ url('/') }}" class="flex items-center gap-2 sm:gap-3 group flex-shrink min-w-0">
                     <img src="{{ asset('images/uhs-logo.png') }}" 
                          alt="University of Health Sciences Lahore" 
-                         class="w-11 h-11 sm:w-12 sm:h-12 object-contain flex-shrink-0 drop-shadow-sm transition-transform duration-200 group-hover:scale-105"
+                         class="w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 object-contain flex-shrink-0 drop-shadow-sm transition-transform duration-200 group-hover:scale-105"
                          style="max-width: 48px; max-height: 48px;">
-                    <div class="flex flex-col justify-center">
-                        <div class="flex items-center gap-2">
-                            <span class="font-extrabold text-base sm:text-lg text-slate-900 tracking-tight whitespace-nowrap font-display">
+                    <div class="flex flex-col justify-center min-w-0">
+                        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                            <span class="font-extrabold text-sm sm:text-base md:text-lg text-slate-900 tracking-tight truncate font-display">
                                 University of Health Sciences
                             </span>
-                            <span class="hidden sm:inline-flex text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 whitespace-nowrap">
+                            <span class="hidden lg:inline-flex text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 whitespace-nowrap">
                                 IT Helpdesk
                             </span>
                         </div>
-                        <div class="text-[11px] text-slate-500 font-medium whitespace-nowrap flex items-center gap-1.5">
-                            <span>Directorate of IT</span>
-                            <span class="text-slate-300">&bull;</span>
-                            <span>Hardware &amp; Network Division</span>
+                        <div class="text-[10px] sm:text-[11px] text-slate-500 font-medium truncate flex items-center gap-1 sm:gap-1.5">
+                            <span class="truncate">Directorate of IT</span>
+                            <span class="text-slate-300 hidden sm:inline">&bull;</span>
+                            <span class="hidden sm:inline">Hardware &amp; Network Division</span>
                         </div>
                     </div>
                 </a>
@@ -126,7 +126,7 @@
                 </nav>
 
                 <!-- ACTIONS & MOBILE MENU TOGGLE -->
-                <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                <div class="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
                     <!-- Quick Track Link for medium screens -->
                     <a href="#track" 
                        class="hidden md:inline-flex 2xl:hidden items-center gap-1.5 px-3 py-2 text-xs font-semibold text-uhs-800 bg-uhs-50 hover:bg-uhs-100 rounded-xl border border-uhs-200/80 transition whitespace-nowrap">
@@ -136,26 +136,29 @@
                         <span>Track</span>
                     </a>
 
+                    <!-- Staff Login button (Prominent in navbar on sm+, accessible via mobile menu on phones) -->
                     <a href="{{ url('/admin/login') }}"
-                       class="inline-flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-semibold text-slate-700 hover:text-uhs-800 bg-slate-100 hover:bg-slate-200/80 rounded-xl border border-slate-200/70 transition whitespace-nowrap shadow-2xs">
-                        <svg class="w-4 h-4 text-slate-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                       class="hidden sm:inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-slate-700 hover:text-uhs-800 bg-slate-100 hover:bg-slate-200/80 rounded-xl border border-slate-200/70 transition whitespace-nowrap shadow-2xs">
+                        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
                         </svg>
                         <span class="whitespace-nowrap">Staff Login</span>
                     </a>
 
+                    <!-- Lodge Complaint Button -->
                     <a href="{{ url('/admin/tickets/create') }}"
-                       class="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-uhs-700 via-uhs-800 to-navy-900 hover:from-uhs-800 hover:to-navy-950 text-white font-bold text-xs sm:text-sm shadow-md shadow-uhs-900/20 hover:shadow-lg hover:shadow-uhs-900/30 hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap">
-                        <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                       class="inline-flex items-center gap-1 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2.5 rounded-xl bg-gradient-to-r from-uhs-700 via-uhs-800 to-navy-900 hover:from-uhs-800 hover:to-navy-950 text-white font-bold text-xs sm:text-sm shadow-md shadow-uhs-900/20 hover:shadow-lg hover:shadow-uhs-900/30 hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap">
+                        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
                         </svg>
-                        <span class="whitespace-nowrap">Lodge Complaint</span>
+                        <span class="hidden xs:inline whitespace-nowrap">Lodge Complaint</span>
+                        <span class="xs:hidden whitespace-nowrap">Lodge</span>
                     </a>
 
                     <!-- Hamburger Button for screens below 2XL -->
                     <button type="button" 
                             onclick="const m = document.getElementById('header-nav-menu'); m.classList.toggle('hidden');"
-                            class="2xl:hidden p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200/70 transition"
+                            class="2xl:hidden p-1.5 sm:p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200/70 transition"
                             aria-label="Navigation Menu">
                         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -166,28 +169,86 @@
         </div>
 
         <!-- DROPDOWN NAV MENU (For screens below 2XL) -->
-        <div id="header-nav-menu" class="hidden 2xl:hidden border-t border-slate-200/80 bg-white/98 backdrop-blur-md px-4 py-3 shadow-lg">
-            <div class="max-w-7xl mx-auto flex flex-col gap-1 text-sm font-semibold text-slate-700">
-                <a href="#track" onclick="document.getElementById('header-nav-menu').classList.add('hidden')" class="px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-uhs-700 transition">Track Complaint</a>
-                <a href="#services" onclick="document.getElementById('header-nav-menu').classList.add('hidden')" class="px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-uhs-700 transition">IT Services</a>
-                <a href="#how-it-works" onclick="document.getElementById('header-nav-menu').classList.add('hidden')" class="px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-uhs-700 transition">Workflow</a>
-                <a href="#knowledge" onclick="document.getElementById('header-nav-menu').classList.add('hidden')" class="px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-uhs-700 transition">Self-Help Guides</a>
-                <a href="#helpline" onclick="document.getElementById('header-nav-menu').classList.add('hidden')" class="px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-uhs-700 transition">Emergency Contacts</a>
+        <div id="header-nav-menu" class="hidden 2xl:hidden border-t border-slate-200/80 bg-white/98 backdrop-blur-md px-4 py-4 shadow-xl">
+            <div class="max-w-7xl mx-auto flex flex-col gap-2">
+                <!-- Mobile Actions (< sm screens) -->
+                <div class="flex flex-col sm:hidden gap-2 pb-3 mb-2 border-b border-slate-200">
+                    <a href="{{ url('/admin/tickets/create') }}"
+                       onclick="document.getElementById('header-nav-menu').classList.add('hidden')"
+                       class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-uhs-700 to-navy-900 text-white font-bold text-sm shadow-md">
+                        <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
+                        </svg>
+                        <span>Lodge New Complaint</span>
+                    </a>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="{{ url('/admin/login') }}"
+                           onclick="document.getElementById('header-nav-menu').classList.add('hidden')"
+                           class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs border border-slate-200">
+                            <svg class="w-3.5 h-3.5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                            </svg>
+                            <span>Staff Login</span>
+                        </a>
+                        <a href="#track"
+                           onclick="document.getElementById('header-nav-menu').classList.add('hidden')"
+                           class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-uhs-50 hover:bg-uhs-100 text-uhs-800 font-semibold text-xs border border-uhs-200">
+                            <svg class="w-3.5 h-3.5 text-uhs-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                            <span>Track Status</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="flex flex-col gap-1 text-sm font-semibold text-slate-700">
+                    <a href="#track" onclick="document.getElementById('header-nav-menu').classList.add('hidden')" class="px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-uhs-700 transition flex items-center justify-between">
+                        <span>Track Complaint</span>
+                        <span class="text-xs text-slate-400 font-normal">Real-time status</span>
+                    </a>
+                    <a href="#services" onclick="document.getElementById('header-nav-menu').classList.add('hidden')" class="px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-uhs-700 transition flex items-center justify-between">
+                        <span>IT Services</span>
+                        <span class="text-xs text-slate-400 font-normal">Hardware &amp; Network</span>
+                    </a>
+                    <a href="#how-it-works" onclick="document.getElementById('header-nav-menu').classList.add('hidden')" class="px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-uhs-700 transition flex items-center justify-between">
+                        <span>Workflow</span>
+                        <span class="text-xs text-slate-400 font-normal">Resolution steps</span>
+                    </a>
+                    <a href="#knowledge" onclick="document.getElementById('header-nav-menu').classList.add('hidden')" class="px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-uhs-700 transition flex items-center justify-between">
+                        <span>Self-Help Guides</span>
+                        <span class="text-xs text-slate-400 font-normal">Knowledge base</span>
+                    </a>
+                    <a href="#helpline" onclick="document.getElementById('header-nav-menu').classList.add('hidden')" class="px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-uhs-700 transition flex items-center justify-between">
+                        <span>Emergency Contacts</span>
+                        <span class="text-xs text-slate-400 font-normal">Hotline Ext 304, 305</span>
+                    </a>
+                </div>
+
+                <!-- Direct Phone Helpline Call Link on Mobile -->
+                <div class="pt-2 mt-1 border-t border-slate-100">
+                    <a href="tel:+924299231304" class="flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+                        <svg class="w-3.5 h-3.5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        <span>Call Emergency IT Hotline (Ext 304 / 305)</span>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- HERO SECTION WITH INTERACTIVE COSMIC NEBULA & STAR UNIVERSE -->
-    <section class="hero-pattern relative text-white pt-20 pb-28 overflow-hidden" id="hero-cosmic-universe">
+    <section class="hero-pattern relative text-white pt-14 sm:pt-20 pb-20 sm:pb-28 overflow-hidden" id="hero-cosmic-universe">
         <!-- Interactive Star Universe Canvas -->
         <canvas id="cosmic-stars-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0" style="opacity: 0.95;"></canvas>
 
-        <!-- Interactive Nebula Cloud Following Mouse -->
+        <!-- Interactive Nebula Cloud Following Mouse / Touch -->
         <div id="cosmic-nebula-glow" 
-             class="absolute w-[500px] h-[500px] rounded-full pointer-events-none blur-[100px] transition-opacity duration-300 ease-out z-0"
+             class="absolute w-[360px] sm:w-[500px] h-[360px] sm:h-[500px] rounded-full pointer-events-none blur-[80px] sm:blur-[100px] transition-opacity duration-300 ease-out z-0"
              style="background: radial-gradient(circle, rgba(16, 185, 129, 0.28) 0%, rgba(14, 165, 233, 0.20) 35%, rgba(99, 102, 241, 0.12) 65%, transparent 75%); transform: translate(-50%, -50%); opacity: 0; top: 50%; left: 50%;"></div>
 
-        <!-- Ambient Ambient Lighting -->
+        <!-- Ambient Lighting -->
         <div class="absolute -top-32 left-1/4 w-96 h-96 bg-uhs-500/20 rounded-full blur-3xl pointer-events-none z-0"></div>
         <div class="absolute top-1/2 right-10 w-80 h-80 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none z-0"></div>
         <div class="absolute -bottom-20 left-1/3 w-[500px] h-[250px] bg-emerald-500/15 rounded-full blur-3xl pointer-events-none z-0"></div>
@@ -195,32 +256,32 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-uhs-300 border border-white/10 text-xs font-semibold backdrop-blur-sm mb-6">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span>UHS Institutional IT Service Management System</span>
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
+                    <span class="truncate">UHS Institutional IT Service Management System</span>
                 </div>
 
-                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight font-display leading-tight sm:leading-tight mb-6">
+                <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight font-display leading-tight sm:leading-tight mb-6">
                     Fast, Transparent & Reliable <br class="hidden sm:inline">
                     <span class="bg-gradient-to-r from-uhs-300 via-sky-200 to-indigo-300 bg-clip-text text-transparent">IT Hardware & Networking Support</span>
                 </h1>
 
-                <p class="text-base sm:text-lg text-slate-300 mb-10 leading-relaxed font-normal">
+                <p class="text-sm sm:text-lg text-slate-300 mb-8 sm:mb-10 leading-relaxed font-normal px-2">
                     Lodge complaints for internet disruptions, network cabling, computer hardware, printers, servers, and institutional software. Track technical progress in real time with end-to-end accountability.
                 </p>
 
-                <!-- QUICK ACTIONS -->
-                <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
+                <!-- QUICK ACTIONS (Full-width responsive on mobile) -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-14 w-full max-w-lg mx-auto">
                     <a href="{{ url('/admin/tickets/create') }}"
-                       class="px-6 py-3.5 rounded-xl bg-uhs-500 hover:bg-uhs-600 text-white font-bold text-base shadow-lg shadow-uhs-500/30 transition transform hover:-translate-y-0.5 flex items-center gap-2.5">
-                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                       class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-uhs-500 hover:bg-uhs-600 text-white font-bold text-sm sm:text-base shadow-lg shadow-uhs-500/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5">
+                        <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
                         <span>Lodge New Complaint</span>
                     </a>
 
                     <a href="#track"
-                       class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-base border border-white/20 backdrop-blur-md transition flex items-center gap-2">
-                        <svg class="w-5 h-5 text-uhs-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                       class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-sm sm:text-base border border-white/20 backdrop-blur-md transition flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5 text-uhs-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
                         <span>Track Existing Ticket</span>
@@ -228,8 +289,24 @@
                 </div>
 
                 <!-- QUICK STATS COUNTERS -->
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto pt-6 border-t border-white/10 text-left">
-                    <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto pt-6 border-t border-white/10 text-left">
+                    <div class="p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10">
+                        <div class="text-xl sm:text-2xl font-black text-uhs-300 font-display">{{ $stats['total_complaints'] }}</div>
+                        <div class="text-[11px] sm:text-xs text-slate-400 mt-1">Total Complaints Lodged</div>
+                    </div>
+                    <div class="p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10">
+                        <div class="text-xl sm:text-2xl font-black text-emerald-400 font-display">{{ $stats['resolved_complaints'] }}</div>
+                        <div class="text-[11px] sm:text-xs text-slate-400 mt-1">Confirmed Resolved</div>
+                    </div>
+                    <div class="p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10">
+                        <div class="text-xl sm:text-2xl font-black text-sky-300 font-display">{{ $stats['active_departments'] }}</div>
+                        <div class="text-[11px] sm:text-xs text-slate-400 mt-1">UHS Departments Active</div>
+                    </div>
+                    <div class="p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10">
+                        <div class="text-xl sm:text-2xl font-black text-amber-300 font-display">&lt; 4 Hours</div>
+                        <div class="text-[11px] sm:text-xs text-slate-400 mt-1">Average Response Target</div>
+                    </div>
+                </div>
                         <div class="text-2xl font-black text-uhs-300 font-display">{{ $stats['total_complaints'] }}</div>
                         <div class="text-xs text-slate-400 mt-1">Total Complaints Lodged</div>
                     </div>
@@ -946,6 +1023,42 @@
                 mouse.targetY = -1000;
                 if (nebula) nebula.style.opacity = '0';
             });
+
+            // Touch events for mobile devices
+            hero.addEventListener('touchstart', (e) => {
+                if (e.touches && e.touches.length > 0) {
+                    const rect = hero.getBoundingClientRect();
+                    const touch = e.touches[0];
+                    mouse.targetX = touch.clientX - rect.left;
+                    mouse.targetY = touch.clientY - rect.top;
+                    mouse.x = mouse.targetX;
+                    mouse.y = mouse.targetY;
+                    mouse.isHovered = true;
+                    for (let i = 0; i < 8; i++) {
+                        stardust.push(new StardustCloud(mouse.targetX, mouse.targetY));
+                    }
+                }
+            }, { passive: true });
+
+            hero.addEventListener('touchmove', (e) => {
+                if (e.touches && e.touches.length > 0) {
+                    const rect = hero.getBoundingClientRect();
+                    const touch = e.touches[0];
+                    mouse.targetX = touch.clientX - rect.left;
+                    mouse.targetY = touch.clientY - rect.top;
+                    mouse.isHovered = true;
+                    if (Math.random() < 0.35) {
+                        stardust.push(new StardustCloud(mouse.targetX, mouse.targetY));
+                    }
+                }
+            }, { passive: true });
+
+            hero.addEventListener('touchend', () => {
+                setTimeout(() => {
+                    mouse.isHovered = false;
+                    if (nebula) nebula.style.opacity = '0';
+                }, 1200);
+            }, { passive: true });
 
             // Supernova burst on click
             hero.addEventListener('click', (e) => {

@@ -451,16 +451,88 @@
         gap: 0.25rem !important;
     }
 
-    .fi-simple-page .fi-fo-field-wrp {
+    .fi-simple-page .fi-fo-field-wrp,
+    .fi-simple-page .fi-fo-field {
         margin-bottom: 0.2rem !important;
     }
 
+    /* Auth Form Labels & Text - Force dark readable colors on white card in both light & dark mode */
+    .fi-simple-page .fi-fo-field-label,
+    .fi-simple-page .fi-fo-field-label *,
+    .fi-simple-page .fi-fo-field-label-content,
+    .fi-simple-page .fi-fo-field-label-content *,
+    .fi-simple-page .fi-fo-field-label-ctn,
+    .fi-simple-page .fi-fo-field-label-ctn *,
+    .fi-simple-page [data-field-wrapper] label,
+    .fi-simple-page [data-field-wrapper] label *,
+    .fi-simple-page [data-field-wrapper] span,
     .fi-simple-page .fi-fo-field-wrp-label,
-    .fi-simple-page label {
+    .fi-simple-page .fi-fo-field-wrp-label *,
+    .fi-simple-page label,
+    .fi-simple-page label *,
+    .fi-simple-page .fi-checkbox-label,
+    .fi-simple-page .fi-checkbox-label *,
+    .dark .fi-simple-page .fi-fo-field-label,
+    .dark .fi-simple-page .fi-fo-field-label *,
+    .dark .fi-simple-page .fi-fo-field-label-content,
+    .dark .fi-simple-page .fi-fo-field-label-content *,
+    .dark .fi-simple-page .fi-fo-field-label-ctn,
+    .dark .fi-simple-page .fi-fo-field-label-ctn *,
+    .dark .fi-simple-page [data-field-wrapper] label,
+    .dark .fi-simple-page [data-field-wrapper] label *,
+    .dark .fi-simple-page [data-field-wrapper] span,
+    .dark .fi-simple-page .fi-fo-field-wrp-label,
+    .dark .fi-simple-page .fi-fo-field-wrp-label *,
+    .dark .fi-simple-page label,
+    .dark .fi-simple-page label *,
+    .dark .fi-simple-page .fi-checkbox-label,
+    .dark .fi-simple-page .fi-checkbox-label *,
+    .dark .fi-simple-page .fi-fo-field-wrp-label-text,
+    .dark .fi-simple-page span.text-gray-950,
+    .dark .fi-simple-page span.dark\:text-white,
+    .dark .fi-simple-main span.text-gray-950,
+    .dark .fi-simple-main span.dark\:text-white {
         margin-bottom: 0.1rem !important;
-        font-size: 0.73rem !important;
+        font-size: 0.74rem !important;
         font-weight: 600 !important;
-        color: #334155 !important;
+        color: #1e293b !important;
+        -webkit-text-fill-color: #1e293b !important;
+    }
+
+    /* Keep required asterisk red */
+    .fi-simple-page .fi-fo-field-label-required-mark,
+    .fi-simple-page [data-field-wrapper] sup,
+    .fi-simple-page sup,
+    .fi-simple-page .fi-fo-field-wrp-label sup,
+    .dark .fi-simple-page .fi-fo-field-label-required-mark,
+    .dark .fi-simple-page [data-field-wrapper] sup,
+    .dark .fi-simple-page sup,
+    .dark .fi-simple-page .fi-fo-field-wrp-label sup {
+        color: #dc2626 !important;
+        -webkit-text-fill-color: #dc2626 !important;
+        font-weight: 700 !important;
+    }
+
+    /* Links on auth pages */
+    .fi-simple-page a,
+    .dark .fi-simple-page a {
+        color: #059669 !important;
+        -webkit-text-fill-color: #059669 !important;
+    }
+
+    .fi-simple-page a:hover,
+    .dark .fi-simple-page a:hover {
+        color: #047857 !important;
+        -webkit-text-fill-color: #047857 !important;
+    }
+
+    /* Eye / password reveal button & icons */
+    .fi-simple-page .fi-icon-btn,
+    .fi-simple-page button[type="button"] svg,
+    .dark .fi-simple-page .fi-icon-btn,
+    .dark .fi-simple-page button[type="button"] svg {
+        color: #64748b !important;
+        -webkit-text-fill-color: #64748b !important;
     }
 
     .fi-simple-page .fi-input-wrp {
