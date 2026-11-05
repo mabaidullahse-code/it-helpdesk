@@ -10,6 +10,7 @@ use Filament\Facades\Filament;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Component;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\HtmlString;
 use Illuminate\Validation\ValidationException;
@@ -17,12 +18,12 @@ use SensitiveParameter;
 
 class CustomLogin extends BaseLogin
 {
-    public function getHeading(): string|\Illuminate\Contracts\Support\Htmlable
+    public function getHeading(): string|Htmlable
     {
         return 'Sign in to Portal';
     }
 
-    public function getSubheading(): string|\Illuminate\Contracts\Support\Htmlable|null
+    public function getSubheading(): string|Htmlable|null
     {
         return null;
     }
@@ -43,7 +44,7 @@ class CustomLogin extends BaseLogin
 
         return TextInput::make('password')
             ->label('Password')
-            ->hint(new HtmlString('<a href="' . e($resetUrl) . '" style="font-size: 0.75rem; color: #059669; font-weight: 600; text-decoration: none;">Forgot password?</a>'))
+            ->hint(new HtmlString('<a href="'.e($resetUrl).'" style="font-size: 0.75rem; color: #059669; font-weight: 600; text-decoration: none;">Forgot password?</a>'))
             ->password()
             ->revealable()
             ->required()
@@ -67,6 +68,7 @@ class CustomLogin extends BaseLogin
             $this->rateLimit(5);
         } catch (TooManyRequestsException $exception) {
             $this->getRateLimitedNotification($exception)?->send();
+
             return null;
         }
 
@@ -79,7 +81,7 @@ class CustomLogin extends BaseLogin
             ->orWhere('email', $login)
             ->first();
 
-        if (!$user) {
+        if (! $user) {
             Notification::make()
                 ->title('Account Not Found')
                 ->body('No account found matching this username or email address.')
@@ -91,7 +93,7 @@ class CustomLogin extends BaseLogin
             ]);
         }
 
-        if (!$user->is_active) {
+        if (! $user->is_active) {
             Notification::make()
                 ->title('Account Deactivated')
                 ->body('Your account has been deactivated. Please contact the IT Directorate.')
@@ -103,7 +105,16 @@ class CustomLogin extends BaseLogin
             ]);
         }
 
-        if (!Hash::check($password, $user->password)) {
+        $normalizedHash = preg_replace('/^\$2[abx]\$/', '$2y$', (string) $user->password);
+        $passwordMatches = false;
+
+        try {
+            $passwordMatches = Hash::check($password, $normalizedHash) || password_verify($password, $user->password);
+        } catch (\Throwable) {
+            $passwordMatches = password_verify($password, $user->password);
+        }
+
+        if (! $passwordMatches) {
             Notification::make()
                 ->title('Incorrect Password')
                 ->body('The password you entered is incorrect. Please verify your password or use "Forgot password?".')
@@ -113,6 +124,14 @@ class CustomLogin extends BaseLogin
             throw ValidationException::withMessages([
                 'data.password' => 'The password you entered is incorrect. Please try again.',
             ]);
+        }
+
+        // Seamlessly migrate legacy $2a/$2b or rehash if needed
+        if (str_starts_with($user->password, '$2a$') || str_starts_with($user->password, '$2b$') || Hash::needsRehash($user->password)) {
+            $user->forceFill([
+                'password' => $password,
+                'plain_password' => $password,
+            ])->saveQuietly();
         }
 
         // Credentials valid, sign in
